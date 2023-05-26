@@ -1,0 +1,25 @@
+Name: chat-api                                      # 项目名称
+Host: 0.0.0.0                                       # 项目监听地址
+Port: 8888                                          # 项目监听端口
+
+Mysql:
+  DataSource: chat:123456@tcp(mysql57:3306)/chat?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai # 数据库连接地址
+
+RedisCache:
+  - Host: redis7:6379                               # redis缓存地址
+    Pass: "123456"                                  # redis缓存密码
+
+Log:
+  stat: false
+
+WeCom:
+  CorpID: "wwxxxxxxxxxxxxxxxxxxxx"                  # 企业微信CorpID
+  DefaultAgentSecret: "55sO-xxxxxxxxxxxxxxxxxxU"    # 企业微信应用 Secret
+  Token: "xxxxxxxxxx"                               # 企业微信应用/客服消息 Token
+  EncodingAESKey: "xxxxxxxxxxxxxxxx"                # 企业微信应用/客服消息 EncodingAESKey
+
+OpenAi:
+  Key: "xxxxxxxxxxxxxxxxxxxxx"                      # OpenAi Key
+
+Response:                                           # 回复配置
+    Stream: true                                    # 是否开启流式回复,自动断句（可选）
